@@ -1,6 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.helpinghands.boundary.Stop" >
+    tools:context="com.helpinghands.activity.Stop" >
 
     <item
         android:id="@+id/action_settings"

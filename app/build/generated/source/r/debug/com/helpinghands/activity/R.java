@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.helpinghands.boundary;
+package com.helpinghands.activity;
 
 public final class R {
     public static final class attr {

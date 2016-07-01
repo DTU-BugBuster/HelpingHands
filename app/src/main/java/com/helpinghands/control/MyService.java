@@ -6,7 +6,7 @@ import android.os.IBinder;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.helpinghands.boundary.Stop;
+import com.helpinghands.activity.Stop;
 import com.helpinghands.entity.AccelerometerListener;
 
 public class MyService extends Service implements AccelerometerListener {

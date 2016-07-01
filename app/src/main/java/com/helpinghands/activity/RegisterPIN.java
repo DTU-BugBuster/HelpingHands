@@ -1,4 +1,4 @@
-package com.helpinghands.boundary;
+package com.helpinghands.activity;
 
 import com.helpinghands.control.UserInfoManager;
 

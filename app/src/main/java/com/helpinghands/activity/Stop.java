@@ -1,4 +1,4 @@
-package com.helpinghands.boundary;
+package com.helpinghands.activity;
 
 import java.util.List;
 
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import com.helpinghands.control.DatabaseHandler;
 import com.helpinghands.control.GetLocationManager;
@@ -14,28 +16,49 @@ import com.helpinghands.control.TriggerNotifManager;
 import com.helpinghands.control.UserInfoManager;
 import com.helpinghands.entity.Contact;
 
-public class Alert extends Activity {
+public class Stop extends Activity {
 
-	
 	TriggerNotifManager myNotif;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_alert);
-			
+		setContentView(R.layout.activity_stop);
+		
+		
 		DatabaseHandler db = new DatabaseHandler(this);
         List<Contact> contactList=db.getAllContacts();
         GetLocationManager myLoc=new GetLocationManager(this);
         String name=(new UserInfoManager(this)).retreiveUserName();
+        
         myNotif=new TriggerNotifManager(name, contactList, myLoc);
-		
-	}
-	
-	public void onALERTClick(View v){
-	        
         myNotif.sendDangerSMS();
         myNotif.sendDangerMail();
-       			
+        
+	}
+	
+	public static boolean isValidPIN(String pin){
+		if(pin.equals(""))
+			return false;
+		else if(pin.length()!=4)
+			return false;
+		else
+			return true;
+	}
+	
+	public void onSTOPClick(View v){
+		
+		String PIN=""+(new UserInfoManager(this)).retreivePIN();
+		String enteredPIN=((EditText)findViewById(R.id.stoppin)).getText().toString();
+		
+		if(isValidPIN(enteredPIN) && enteredPIN.equals(PIN))
+		myNotif.sendSafeSMS();
+		else{
+			((EditText)findViewById(R.id.stoppin)).setText("");
+			((EditText)findViewById(R.id.stoppin)).requestFocus();
+			Toast.makeText(this, "Entered Wrong PIN", Toast.LENGTH_SHORT).show();
+		}
+			
 	}
 
 	@Override

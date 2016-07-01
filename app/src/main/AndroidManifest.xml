@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.helpinghands.boundary"
+    package="com.helpinghands.activity"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -20,7 +20,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".Login"
+            android:name="com.helpinghands.activity.Login"
             android:label="@string/title_activity_login" >
        
             <intent-filter>
@@ -32,27 +32,27 @@
         <service android:name="com.helpinghands.control.MyService" />
         <service android:name="com.helpinghands.entity.GPSTracker" />
         <activity
-            android:name=".RegisterPIN"
+            android:name="com.helpinghands.activity.RegisterPIN"
             android:label="@string/title_register_pin" >
            </activity>
         <activity
-            android:name=".SetShakeLevel"
+            android:name="com.helpinghands.activity.SetShakeLevel"
             android:label="@string/title_activity_set_shake_level" >
         </activity>
         <activity
-            android:name=".UserInfo"
+            android:name="com.helpinghands.activity.UserInfo"
             android:label="@string/title_activity_user_info" >
         </activity>
         <activity
-            android:name=".NominateContacts"
+            android:name="com.helpinghands.activity.NominateContacts"
             android:label="@string/title_activity_nominate_contacts" >
         </activity>
         <activity
-            android:name=".Alert"
+            android:name="com.helpinghands.activity.Alert"
             android:label="@string/title_activity_alert" >
         </activity>
         <activity
-            android:name=".Stop"
+            android:name="com.helpinghands.activity.Stop"
             android:label="@string/title_activity_stop" >
         </activity>
     </application>
