@@ -3,7 +3,7 @@
 
 Android App for helping women in danger by sending danger notifications to nominated contacts
 
-###### This project was developed by a team of six people (including me) for our college's final semester Design Lab. (College : Institue of Engineering & Management , Kolakata)
+###### This project was developed by a team of six people (including me) for our college's final semester Design Lab. (College : Institue of Engineering & Management , Kolkata)
 
 ### Problem Statement and Solution
 
