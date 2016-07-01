@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="F:\Android Projects\HelpingHands\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="8f11e61b616ce1b8ad847205098cc6da95a108c8">
+        <dex dex="F:\Android Projects\HelpingHands\app\build\intermediates\pre-dexed\debug\instant-run_dcfc18d4f8cdd471cdf7936eccb5731f3c59c17c.jar" />
+    </item>
+    <item
+        jar="C:\Users\aloy\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="F:\Android Projects\HelpingHands\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3_763da8abfb02aa3e205bf9451b97915a3dfaa558.jar" />
+    </item>
+    <item
+        jar="F:\Android Projects\HelpingHands\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="F:\Android Projects\HelpingHands\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-21.0.3_34d6e58adfc6907f5a2a396b1daa20030280ce9d.jar" />
+    </item>
+    <item
+        jar="F:\Android Projects\HelpingHands\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="e0baea15b6392b05ff910becb219b53844d4f69f">
+        <dex dex="F:\Android Projects\HelpingHands\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_f810858285e9b9898926329cbb2522276f2fc111.jar" />
+    </item>
+    <item
+        jar="F:\Android Projects\HelpingHands\app\libs\mail.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="428e267abff0d10802ccde86b915da2c20471160">
+        <dex dex="F:\Android Projects\HelpingHands\app\build\intermediates\pre-dexed\debug\mail_6f0ca8917e8e12f56bfce6efa304fc1e4dfec6ef.jar" />
+    </item>
+    <item
+        jar="F:\Android Projects\HelpingHands\app\libs\additionnal.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="bd9e8dc422bb8c8405359947fe9f4282b49f57f4">
+        <dex dex="F:\Android Projects\HelpingHands\app\build\intermediates\pre-dexed\debug\additionnal_a40530236f85040dd362bb165da939fafec6dfb5.jar" />
+    </item>
+    <item
+        jar="F:\Android Projects\HelpingHands\app\libs\activation.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="d1257cbff6faa44c1f325ae0d9413522d4644383">
+        <dex dex="F:\Android Projects\HelpingHands\app\build\intermediates\pre-dexed\debug\activation_96927dd3349255a3aa9f75de8b564449a4a641ab.jar" />
+    </item>
+    <item
+        jar="F:\Android Projects\HelpingHands\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\libs\internal_impl-21.0.3.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="F:\Android Projects\HelpingHands\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3_ec9cdd60211dbefa40255f93ee9f779706bd8f9c.jar" />
+    </item>
+
+</items>

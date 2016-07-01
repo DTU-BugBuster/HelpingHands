@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_alert.xml",
+        "source": "F:\\Android Projects\\HelpingHands\\app\\src\\main\\res\\layout\\activity_alert.xml"
+    },
+    {
+        "merged": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_set_shake_level.xml",
+        "source": "F:\\Android Projects\\HelpingHands\\app\\src\\main\\res\\layout\\activity_set_shake_level.xml"
+    },
+    {
+        "merged": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_stop.xml",
+        "source": "F:\\Android Projects\\HelpingHands\\app\\src\\main\\res\\layout\\activity_stop.xml"
+    },
+    {
+        "merged": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_register_pin.xml",
+        "source": "F:\\Android Projects\\HelpingHands\\app\\src\\main\\res\\layout\\activity_register_pin.xml"
+    },
+    {
+        "merged": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_nominate_contacts.xml",
+        "source": "F:\\Android Projects\\HelpingHands\\app\\src\\main\\res\\layout\\activity_nominate_contacts.xml"
+    },
+    {
+        "merged": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_login.xml",
+        "source": "F:\\Android Projects\\HelpingHands\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_user_info.xml",
+        "source": "F:\\Android Projects\\HelpingHands\\app\\src\\main\\res\\layout\\activity_user_info.xml"
+    }
+]

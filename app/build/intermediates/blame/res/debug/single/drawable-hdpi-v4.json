@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\hhicon.png",
+        "source": "F:\\Android Projects\\HelpingHands\\app\\src\\main\\res\\drawable-hdpi\\hhicon.png"
+    },
+    {
+        "merged": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_launcher.png",
+        "source": "F:\\Android Projects\\HelpingHands\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    }
+]

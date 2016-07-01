@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.helpinghands.RegisterPIN" >
+
+    <TextView
+        android:id="@+id/enterpin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:text="@string/enterpinmsg"
+                   />
+
+    <EditText
+        android:id="@+id/pin1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:inputType="numberPassword"
+         />
+    
+    <TextView
+        android:id="@+id/reenterpin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:gravity="center"
+         android:layout_marginTop="100dp"
+        android:text="@string/reenterpinmsg" />
+
+    <EditText
+        android:id="@+id/pin2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:inputType="numberPassword"
+         />
+
+    <Button
+        android:id="@+id/afterpin"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginLeft="200dp"
+        android:text="@string/next"
+        android:onClick="afterPINButton" />
+
+</LinearLayout>
