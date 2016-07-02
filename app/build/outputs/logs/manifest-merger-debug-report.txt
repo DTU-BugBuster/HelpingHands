@@ -17,7 +17,12 @@ ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:2:1
 		ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:2:11-69
 uses-sdk
 ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:support-v4:21.0.3] F:\Android Projects\HelpingHands\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\AndroidManifest.xml:15:5-42
+MERGED from [com.android.support:design:23.0.0] F:\Android Projects\HelpingHands\app\build\intermediates\exploded-aar\com.android.support\design\23.0.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.0.0] F:\Android Projects\HelpingHands\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.0.0] F:\Android Projects\HelpingHands\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.0.0] F:\Android Projects\HelpingHands\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.0.0] F:\Android Projects\HelpingHands\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.0.0] F:\Android Projects\HelpingHands\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\AndroidManifest.xml:20:5-43
 	android:targetSdkVersion
 		ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:9:9-38
 		INJECTED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml
@@ -52,7 +57,12 @@ ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:15:
 		ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:15:22-64
 application
 ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:17:5-58:19
-MERGED from [com.android.support:support-v4:21.0.3] F:\Android Projects\HelpingHands\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\AndroidManifest.xml:16:5-19
+MERGED from [com.android.support:design:23.0.0] F:\Android Projects\HelpingHands\app\build\intermediates\exploded-aar\com.android.support\design\23.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.0.0] F:\Android Projects\HelpingHands\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.0.0] F:\Android Projects\HelpingHands\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.0.0] F:\Android Projects\HelpingHands\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.0.0] F:\Android Projects\HelpingHands\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.0.0] F:\Android Projects\HelpingHands\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\AndroidManifest.xml:22:5-20
 	android:label
 		ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:20:9-41
 	android:allowBackup
@@ -61,12 +71,12 @@ MERGED from [com.android.support:support-v4:21.0.3] F:\Android Projects\HelpingH
 		ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:19:9-40
 	android:theme
 		ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:21:9-40
-activity#com.helpinghands.boundary.Login
+activity#com.helpinghands.activity.Login
 ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:22:9-31:20
 	android:label
 		ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:24:13-57
 	android:name
-		ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:23:13-34
+		ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:23:13-59
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
 ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:26:13-30:29
 action#android.intent.action.MAIN
@@ -85,39 +95,39 @@ service#com.helpinghands.entity.GPSTracker
 ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:33:9-70
 	android:name
 		ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:33:18-67
-activity#com.helpinghands.boundary.RegisterPIN
+activity#com.helpinghands.activity.RegisterPIN
 ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:34:9-37:23
 	android:label
 		ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:36:13-55
 	android:name
-		ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:35:13-40
-activity#com.helpinghands.boundary.SetShakeLevel
+		ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:35:13-65
+activity#com.helpinghands.activity.SetShakeLevel
 ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:38:9-41:20
 	android:label
 		ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:40:13-67
 	android:name
-		ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:39:13-42
-activity#com.helpinghands.boundary.UserInfo
+		ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:39:13-67
+activity#com.helpinghands.activity.UserInfo
 ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:42:9-45:20
 	android:label
 		ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:44:13-61
 	android:name
-		ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:43:13-37
-activity#com.helpinghands.boundary.NominateContacts
+		ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:43:13-62
+activity#com.helpinghands.activity.NominateContacts
 ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:46:9-49:20
 	android:label
 		ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:48:13-69
 	android:name
-		ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:47:13-45
-activity#com.helpinghands.boundary.Alert
+		ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:47:13-70
+activity#com.helpinghands.activity.Alert
 ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:50:9-53:20
 	android:label
 		ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:52:13-57
 	android:name
-		ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:51:13-34
-activity#com.helpinghands.boundary.Stop
+		ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:51:13-59
+activity#com.helpinghands.activity.Stop
 ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:54:9-57:20
 	android:label
 		ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:56:13-56
 	android:name
-		ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:55:13-33
+		ADDED from F:\Android Projects\HelpingHands\app\src\main\AndroidManifest.xml:55:13-58

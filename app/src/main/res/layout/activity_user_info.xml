@@ -7,33 +7,39 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/white"
     tools:context="com.helpinghands.activity.UserInfo" >
 
-    <TextView
+
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/entername" />
-    <EditText 
+        android:layout_height="wrap_content">
+
+    <EditText
         android:id="@+id/name"
         android:layout_marginTop="25dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
-        
+        android:hint="Name"
         />
-    
-    <TextView
-         android:layout_marginTop="25dp"
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/enteremail" />
+        android:layout_height="wrap_content">
+
     <EditText 
         android:id="@+id/email"
         android:layout_marginTop="25dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
+        android:hint="Email"
         />
+    </android.support.design.widget.TextInputLayout>
     
     <TextView
          android:layout_marginTop="25dp"
