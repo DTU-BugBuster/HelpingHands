@@ -1,15 +1,15 @@
 [
     {
-        "merged": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\res\\merged\\debug\\menu\\nominate_contacts.xml",
-        "source": "F:\\Android Projects\\HelpingHands\\app\\src\\main\\res\\menu\\nominate_contacts.xml"
-    },
-    {
         "merged": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\res\\merged\\debug\\menu\\alert.xml",
         "source": "F:\\Android Projects\\HelpingHands\\app\\src\\main\\res\\menu\\alert.xml"
     },
     {
         "merged": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\res\\merged\\debug\\menu\\user_info.xml",
         "source": "F:\\Android Projects\\HelpingHands\\app\\src\\main\\res\\menu\\user_info.xml"
+    },
+    {
+        "merged": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\res\\merged\\debug\\menu\\nominate_contacts.xml",
+        "source": "F:\\Android Projects\\HelpingHands\\app\\src\\main\\res\\menu\\nominate_contacts.xml"
     },
     {
         "merged": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\res\\merged\\debug\\menu\\set_shake_level.xml",
