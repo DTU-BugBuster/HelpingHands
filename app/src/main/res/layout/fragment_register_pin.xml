@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.helpinghands.fragment.RegisterPinFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/hero_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/hh_hero"/>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/black_transparent_bg"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pin1"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:theme="@style/TextInputStyle">
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/enter_pin"
+                android:hint="Enter Secret PIN"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/pin2"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:layout_below="@+id/pin1"
+                android:theme="@style/TextInputStyle">
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/reenter_pin"
+                    android:hint="Re-Enter PIN"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/button_connect_with_google"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:src="@drawable/next"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+
+            />
+
+
+    </FrameLayout>
+
+
+</RelativeLayout>

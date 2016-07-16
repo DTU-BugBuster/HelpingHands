@@ -5,6 +5,7 @@
     tools:context="com.helpinghands.fragment.SocialConnectFragment">
 
     <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager_hero"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
@@ -13,7 +14,7 @@
     </android.support.v4.view.ViewPager>
 
     <com.helpinghands.customUI.CirclePageIndicator
-        android:id="@+id/page_indicator"
+        android:id="@+id/hero_page_indicator"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content" />
 

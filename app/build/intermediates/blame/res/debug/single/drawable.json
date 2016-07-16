@@ -12,6 +12,10 @@
         "source": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_check_material.xml"
     },
     {
+        "merged": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\rounded_transparent_button.xml",
+        "source": "F:\\Android Projects\\HelpingHands\\app\\src\\main\\res\\drawable\\rounded_transparent_button.xml"
+    },
+    {
         "merged": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
         "source": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\drawable\\design_snackbar_background.xml"
     },
@@ -98,6 +102,10 @@
     {
         "merged": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
         "source": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\black_transparent_bg.xml",
+        "source": "F:\\Android Projects\\HelpingHands\\app\\src\\main\\res\\drawable\\black_transparent_bg.xml"
     },
     {
         "merged": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
