@@ -80,6 +80,10 @@
         "source": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_big_media.xml"
     },
     {
+        "merged": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_nominate_mail_contacts.xml",
+        "source": "F:\\Android Projects\\HelpingHands\\app\\src\\main\\res\\layout\\fragment_nominate_mail_contacts.xml"
+    },
+    {
         "merged": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
         "source": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
     },
@@ -98,6 +102,10 @@
     {
         "merged": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
         "source": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_nominate_sms_contacts.xml",
+        "source": "F:\\Android Projects\\HelpingHands\\app\\src\\main\\res\\layout\\fragment_nominate_sms_contacts.xml"
     },
     {
         "merged": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
@@ -140,6 +148,10 @@
         "source": "F:\\Android Projects\\HelpingHands\\app\\src\\main\\res\\layout\\activity_home.xml"
     },
     {
+        "merged": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_set_shake_level.xml",
+        "source": "F:\\Android Projects\\HelpingHands\\app\\src\\main\\res\\layout\\fragment_set_shake_level.xml"
+    },
+    {
         "merged": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item.xml",
         "source": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_item.xml"
     },
@@ -170,6 +182,10 @@
     {
         "merged": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
         "source": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_stop.xml",
+        "source": "F:\\Android Projects\\HelpingHands\\app\\src\\main\\res\\layout\\fragment_stop.xml"
     },
     {
         "merged": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
@@ -222,10 +238,6 @@
     {
         "merged": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
         "source": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_activity_chooser_view.xml"
-    },
-    {
-        "merged": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_nominate_contacts.xml",
-        "source": "F:\\Android Projects\\HelpingHands\\app\\src\\main\\res\\layout\\fragment_nominate_contacts.xml"
     },
     {
         "merged": "F:\\Android Projects\\HelpingHands\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar.xml",
