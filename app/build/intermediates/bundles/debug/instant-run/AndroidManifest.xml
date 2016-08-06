@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.helpinghands.boundary"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <!--
+    <android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    -->
+    <application
+        android:name="com.android.tools.fd.runtime.BootstrapApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/hhicon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.helpinghands.activity.HomeActivity"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.helpinghands.control.MyService" />
+        <!-- <service android:name="com.helpinghands.entity.GPSTracker" /> -->
+
+        <activity
+            android:name="com.helpinghands.activity.RegisterPIN"
+            android:label="@string/title_register_pin" />
+        <activity
+            android:name="com.helpinghands.activity.SetShakeLevel"
+            android:label="@string/title_activity_set_shake_level" />
+        <activity
+            android:name="com.helpinghands.activity.UserInfo"
+            android:label="@string/title_activity_user_info" />
+        <activity
+            android:name="com.helpinghands.activity.NominateContacts"
+            android:label="@string/title_activity_nominate_contacts" />
+        <activity
+            android:name="com.helpinghands.activity.Alert"
+            android:label="@string/title_activity_alert" />
+        <activity
+            android:name="com.helpinghands.activity.Stop"
+            android:label="@string/title_activity_stop" />
+        <!-- <activity android:name=".HomeActivity"></activity> -->
+    </application>
+
+</manifest>

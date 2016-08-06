@@ -1,0 +1,11 @@
+CHANGED,F:\Android Projects\HelpingHands\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\helpinghands\activity\R$styleable$override.class
+CHANGED,F:\Android Projects\HelpingHands\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\android\support\design\R$drawable$override.class
+CHANGED,F:\Android Projects\HelpingHands\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\helpinghands\activity\R$drawable$override.class
+CHANGED,F:\Android Projects\HelpingHands\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\helpinghands\activity\R$id$override.class
+CHANGED,F:\Android Projects\HelpingHands\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\helpinghands\activity\R$menu$override.class
+CHANGED,F:\Android Projects\HelpingHands\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\helpinghands\activity\R$layout$override.class
+CHANGED,F:\Android Projects\HelpingHands\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\helpinghands\activity\R$integer$override.class
+CHANGED,F:\Android Projects\HelpingHands\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\helpinghands\activity\R$style$override.class
+CHANGED,F:\Android Projects\HelpingHands\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\android\support\v7\appcompat\R$drawable$override.class
+CHANGED,F:\Android Projects\HelpingHands\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\helpinghands\activity\R$string$override.class
+CHANGED,F:\Android Projects\HelpingHands\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class

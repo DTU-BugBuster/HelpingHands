@@ -9,14 +9,15 @@
             android:id="@+id/hero_image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/hh_hero"/>
+            android:src="@drawable/hh_hero"
+            android:scaleType="centerCrop"/>
 
 
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/black_transparent_bg"
-            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:padding="16dp"
             >
 
 
@@ -24,13 +25,11 @@
                 android:id="@+id/nominate_contacts"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_marginTop="@dimen/activity_vertical_margin"
-                android:padding="5dp"
                 android:text="Nominate Contacts"
                 android:layout_gravity="top|start"
-                android:typeface="monospace"
-                android:textSize="40sp"
+                android:gravity="center"
+                android:typeface="serif"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 />
@@ -39,7 +38,9 @@
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_gravity="center">
+    android:layout_gravity="center"
+    android:background="#9affffff"
+    android:elevation="12dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -47,6 +48,7 @@
         android:orientation="horizontal"
         android:layout_marginTop="10dp"
         android:id="@+id/contact1"
+
         >
 
 
@@ -54,16 +56,17 @@
             android:id="@+id/contact1_name"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_margin="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_weight="1"
             android:hint="Name"
             android:textSize="20sp"
-            android:textColorHint="@color/white"/>
+            android:textColorHint="@color/black"/>
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
             android:src="@drawable/phonebook"
             />
 
@@ -73,8 +76,7 @@
         android:id="@+id/contact1_phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
         android:layout_below="@+id/contact1"
         android:hint="Phone"
         android:textSize="20sp"
@@ -97,7 +99,7 @@
             android:id="@+id/contact2_name"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_margin="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_weight="1"
             android:hint="Name"
             android:textSize="20sp"
@@ -106,7 +108,8 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
             android:src="@drawable/phonebook"
             />
 
@@ -117,8 +120,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/contact2"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
         android:hint="Phone"
         android:textSize="20sp"
         android:textColorHint="@color/white"
