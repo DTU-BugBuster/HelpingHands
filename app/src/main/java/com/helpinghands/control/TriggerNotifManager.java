@@ -1,8 +1,8 @@
 package com.helpinghands.control;
 
-import java.util.List;
-
 import com.helpinghands.entity.Contact;
+
+import java.util.List;
 
 public class TriggerNotifManager {
 

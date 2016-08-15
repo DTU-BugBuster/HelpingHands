@@ -1,7 +1,5 @@
 package com.helpinghands.activity;
 
-import com.helpinghands.control.UserInfoManager;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +8,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.helpinghands.R;
+import com.helpinghands.control.UserInfoManager;
 
 public class RegisterPIN extends Activity {
 

@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.helpinghands.R;
 import com.helpinghands.control.DatabaseHandler;
 import com.helpinghands.entity.Contact;
 

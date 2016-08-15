@@ -1,7 +1,5 @@
 package com.helpinghands.activity;
 
-import java.util.List;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -10,11 +8,14 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.helpinghands.R;
 import com.helpinghands.control.DatabaseHandler;
 import com.helpinghands.control.GetLocationManager;
 import com.helpinghands.control.TriggerNotifManager;
 import com.helpinghands.control.UserInfoManager;
 import com.helpinghands.entity.Contact;
+
+import java.util.List;
 
 public class Stop extends Activity {
 

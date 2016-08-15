@@ -1,14 +1,14 @@
 package com.helpinghands.control;
 
-import java.io.IOException;
-import java.util.List;
-import java.util.Locale;
-
 import android.content.Context;
 import android.location.Address;
 import android.location.Geocoder;
 
 import com.helpinghands.entity.GPSTracker;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
 
 public class GetLocationManager {
 

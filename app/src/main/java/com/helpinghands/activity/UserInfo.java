@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 
+import com.helpinghands.R;
 import com.helpinghands.control.SendMailManager;
 import com.helpinghands.control.UserInfoManager;
 

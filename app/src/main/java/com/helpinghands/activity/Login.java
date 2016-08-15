@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 
+import com.helpinghands.R;
 import com.helpinghands.control.UserInfoManager;
 
 public class Login extends Activity {
@@ -23,7 +24,7 @@ public class Login extends Activity {
 			startActivity(i);
 		}
 		else{
-			setContentView(R.layout.activity_login);	
+			setContentView(R.layout.activity_login);
 		}
 		
 	}

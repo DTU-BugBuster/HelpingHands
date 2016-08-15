@@ -1,14 +1,15 @@
 package com.helpinghands.activity;
 
-import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 
+import com.helpinghands.R;
 import com.helpinghands.fragment.HeroBannerFragment;
 import com.helpinghands.fragment.NominateSMSContactsFragment;
+import com.helpinghands.utils.SharedPrefUtils;
 
 public class HomeActivity extends FragmentActivity implements
         HeroBannerFragment.OnFragmentInteractionListener,
@@ -19,8 +20,10 @@ public class HomeActivity extends FragmentActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        HeroBannerFragment nsmsc=new HeroBannerFragment();
-        pushFragment(nsmsc);
+        SharedPrefUtils.initSharedPref(this);
+
+        HeroBannerFragment heroBannerFragment=new HeroBannerFragment();
+        pushFragment(heroBannerFragment);
     }
 
 

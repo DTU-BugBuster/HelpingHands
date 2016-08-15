@@ -1,7 +1,5 @@
 package com.helpinghands.control;
 
-import java.util.List;
-
 import android.content.Context;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -10,6 +8,8 @@ import android.hardware.SensorManager;
 import android.widget.Toast;
 
 import com.helpinghands.entity.AccelerometerListener;
+
+import java.util.List;
  
 public class AccelerometerManager {
   

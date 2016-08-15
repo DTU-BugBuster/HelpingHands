@@ -1,14 +1,27 @@
 package com.helpinghands.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
-import com.helpinghands.activity.R;
+import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.auth.api.signin.GoogleSignInResult;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.helpinghands.R;
+import com.helpinghands.activity.HomeActivity;
+import com.helpinghands.utils.Logger;
+import com.helpinghands.utils.SharedPrefUtils;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -18,16 +31,19 @@ import com.helpinghands.activity.R;
  * Use the {@link HeroBannerFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HeroBannerFragment extends Fragment {
+public class HeroBannerFragment extends Fragment implements GoogleApiClient.OnConnectionFailedListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String POSITION = "position";
 
-
+    private static final String TAG = HeroBannerFragment.class.getSimpleName();
     // TODO: Rename and change types of parameters
     private int position;
 
     private OnFragmentInteractionListener mListener;
+    private HomeActivity homeActivity;
+    private GoogleApiClient mGoogleApiClient;
+    private static final int RC_SIGN_IN = 9001;
 
     public HeroBannerFragment() {
         // Required empty public constructor
@@ -55,13 +71,80 @@ public class HeroBannerFragment extends Fragment {
         if (getArguments() != null) {
             position = getArguments().getInt(POSITION);
         }
+
+
+        // Configure sign-in to request the user's ID, email address, and basic
+        // profile. ID and basic profile are included in DEFAULT_SIGN_IN.
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+
+        // Build a GoogleApiClient with access to the Google Sign-In API and the
+        // options specified by gso.
+        mGoogleApiClient = new GoogleApiClient.Builder(homeActivity)
+                .enableAutoManage(homeActivity /* FragmentActivity */, this /* OnConnectionFailedListener */)
+                .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
+                .build();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_hero_banner, container, false);
+        View view = inflater.inflate(R.layout.fragment_hero_banner, container, false);
+
+        view.findViewById(R.id.button_connect_with_google)
+                .setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        signInWithGoogle();
+                    }
+                });
+
+
+
+        return view;
+    }
+
+    private void signInWithGoogle() {
+        Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
+        startActivityForResult(signInIntent, RC_SIGN_IN);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
+        if (requestCode == RC_SIGN_IN) {
+            GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
+            handleSignInResult(result);
+        }
+    }
+
+    private void handleSignInResult(GoogleSignInResult result) {
+
+        Logger.i(TAG, "handleSignInResult ->" + result);
+        if(result!=null){
+
+            if (result.isSuccess()) {
+                Logger.d(TAG,"Login Success -> "+result.isSuccess());
+                // Signed in successfully, show authenticated UI.
+                GoogleSignInAccount acct = result.getSignInAccount();
+                Logger.d(TAG,"Account Info -> "+acct.getDisplayName()+"\n"
+                        +acct.getEmail());
+
+
+                SharedPrefUtils.saveValue();
+
+                Toast.makeText(homeActivity,acct.getEmail(),Toast.LENGTH_SHORT).show();
+
+            } else {
+                // Signed out, show unauthenticated UI.
+                Logger.d(TAG,"Login Failed -> "+result.isSuccess());
+            }
+        }
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -74,6 +157,7 @@ public class HeroBannerFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+        homeActivity=(HomeActivity)context;
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
@@ -86,6 +170,11 @@ public class HeroBannerFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+
     }
 
     /**
