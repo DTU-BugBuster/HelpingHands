@@ -32,4 +32,16 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+
+
+
+
+    <string name="welcome_msg0">Shake the device when in danger.</string>
+
+    <string name="welcome_msg1">We will send SMS and emails to your trusted contacts.</string>
+
+    <string name="welcome_msg2">Including your current location.</string>
+
+    <string name="welcome_msg3">It\'s that simple ♡</string>
+
 </resources>

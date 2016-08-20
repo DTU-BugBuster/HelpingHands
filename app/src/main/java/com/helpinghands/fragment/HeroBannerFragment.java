@@ -20,6 +20,7 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.helpinghands.R;
 import com.helpinghands.activity.HomeActivity;
+import com.helpinghands.constants.AppConstant;
 import com.helpinghands.utils.Logger;
 import com.helpinghands.utils.SharedPrefUtils;
 
@@ -131,13 +132,30 @@ public class HeroBannerFragment extends Fragment implements GoogleApiClient.OnCo
                 Logger.d(TAG,"Login Success -> "+result.isSuccess());
                 // Signed in successfully, show authenticated UI.
                 GoogleSignInAccount acct = result.getSignInAccount();
-                Logger.d(TAG,"Account Info -> "+acct.getDisplayName()+"\n"
-                        +acct.getEmail());
+                String fullName=acct.getDisplayName();
+                String fname=acct.getGivenName();
+                String lname=acct.getFamilyName();
+                String email=acct.getEmail();
 
 
-                SharedPrefUtils.saveValue();
+                Logger.d(TAG,"Account Info -> "+
+                        fname+"\n"+
+                        lname+"\n"+
+                        fullName+"\n"+
+                        email
+                );
+
+
+                SharedPrefUtils.saveValue(AppConstant.USER_FIRST_NAME,fname);
+                SharedPrefUtils.saveValue(AppConstant.USER_LAST_NAME,lname);
+                SharedPrefUtils.saveValue(AppConstant.USER_FULL_NAME,fullName);
+                SharedPrefUtils.saveValue(AppConstant.USER_EMAIL,email);
+
 
                 Toast.makeText(homeActivity,acct.getEmail(),Toast.LENGTH_SHORT).show();
+
+                WelcomeFragment welcomeFragment=new WelcomeFragment();
+                homeActivity.pushFragment(welcomeFragment);
 
             } else {
                 // Signed out, show unauthenticated UI.
