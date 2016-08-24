@@ -154,8 +154,8 @@ public class HeroBannerFragment extends Fragment implements GoogleApiClient.OnCo
 
                 Toast.makeText(homeActivity,acct.getEmail(),Toast.LENGTH_SHORT).show();
 
-                WelcomeFragment welcomeFragment=new WelcomeFragment();
-                homeActivity.pushFragment(welcomeFragment);
+                NominateSMSContactsFragment nominateSMSContactsFragment=new NominateSMSContactsFragment();
+                homeActivity.pushFragment(nominateSMSContactsFragment);
 
             } else {
                 // Signed out, show unauthenticated UI.

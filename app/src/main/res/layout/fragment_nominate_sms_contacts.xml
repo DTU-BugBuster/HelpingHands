@@ -2,45 +2,61 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+    android:background="@color/primary"
         >
 
-        <!-- TODO: Update blank fragment layout -->
-        <ImageView
-            android:id="@+id/hero_image"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/hh_hero"
-            android:scaleType="centerCrop"/>
 
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/black_transparent_bg"
-            android:padding="16dp"
-            >
-
-
-            <TextView
-                android:id="@+id/nominate_contacts"
-                android:layout_width="match_parent"
+    <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nominate Contacts"
-                android:layout_gravity="top|start"
-                android:gravity="center"
-                android:typeface="serif"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="@color/white"
-                />
+                android:orientation="vertical"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:layout_gravity="left|top"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hi,"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/material_text_display2"
+                    />
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/material_text_display1"
+                    />
+            </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/sms_block"
+        android:layout_marginBottom="6dp"
+        android:text="Nominate Contacts to send SMS Notifs to"
+        android:textStyle="normal"
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:textSize="@dimen/material_text_subhead"
+        />
+
 
 
 <RelativeLayout
+    android:id="@+id/sms_block"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:background="#9affffff"
-    android:elevation="12dp">
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginRight="@dimen/activity_horizontal_margin"
+    android:layout_centerInParent="true"
+    android:gravity="center"
+    >
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -48,7 +64,6 @@
         android:orientation="horizontal"
         android:layout_marginTop="10dp"
         android:id="@+id/contact1"
-
         >
 
 
@@ -60,7 +75,7 @@
             android:layout_weight="1"
             android:hint="Name"
             android:textSize="20sp"
-            android:textColorHint="@color/black"/>
+            android:textColorHint="@color/white"/>
 
         <ImageView
             android:layout_width="wrap_content"
@@ -133,14 +148,12 @@
                 android:id="@+id/nominate_sms_contacts_next"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom|right"
-                android:padding="@dimen/activity_horizontal_margin"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
                 android:layout_margin="@dimen/activity_vertical_margin"
                 android:src="@drawable/next"
 
                 />
 
-        </FrameLayout>
-
-    </RelativeLayout>
+</RelativeLayout>
 
