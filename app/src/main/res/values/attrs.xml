@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="MyProgressDialog">
+        <attr name="loadingTitle" format="string">
+        </attr>
+    </declare-styleable>
+
+
+</resources>

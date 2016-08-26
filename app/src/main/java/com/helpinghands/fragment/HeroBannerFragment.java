@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.Auth;
@@ -21,6 +22,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.helpinghands.R;
 import com.helpinghands.activity.HomeActivity;
 import com.helpinghands.constants.AppConstant;
+import com.helpinghands.customui.MyProgressDialog;
 import com.helpinghands.utils.Logger;
 import com.helpinghands.utils.SharedPrefUtils;
 
@@ -45,6 +47,8 @@ public class HeroBannerFragment extends Fragment implements GoogleApiClient.OnCo
     private HomeActivity homeActivity;
     private GoogleApiClient mGoogleApiClient;
     private static final int RC_SIGN_IN = 9001;
+    private MyProgressDialog loginProgress;
+    private Button gConnect;
 
     public HeroBannerFragment() {
         // Required empty public constructor
@@ -93,11 +97,16 @@ public class HeroBannerFragment extends Fragment implements GoogleApiClient.OnCo
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_hero_banner, container, false);
+        gConnect=(Button)view.findViewById(R.id.button_connect_with_google);
+        loginProgress=(MyProgressDialog)view.findViewById(R.id.login_progress);
+
 
         view.findViewById(R.id.button_connect_with_google)
                 .setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        gConnect.setVisibility(View.GONE);
+                        loginProgress.setVisibility(View.VISIBLE);
                         signInWithGoogle();
                     }
                 });
@@ -124,6 +133,9 @@ public class HeroBannerFragment extends Fragment implements GoogleApiClient.OnCo
     }
 
     private void handleSignInResult(GoogleSignInResult result) {
+
+        loginProgress.setVisibility(View.GONE);
+        gConnect.setVisibility(View.VISIBLE);
 
         Logger.i(TAG, "handleSignInResult ->" + result);
         if(result!=null){
@@ -159,6 +171,7 @@ public class HeroBannerFragment extends Fragment implements GoogleApiClient.OnCo
 
             } else {
                 // Signed out, show unauthenticated UI.
+                Toast.makeText(homeActivity,"Error occured. Try again later.",Toast.LENGTH_SHORT).show();
                 Logger.d(TAG,"Login Failed -> "+result.isSuccess());
             }
         }

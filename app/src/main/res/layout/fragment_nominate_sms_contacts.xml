@@ -78,6 +78,7 @@
             android:textColorHint="@color/white"/>
 
         <ImageView
+            android:id="@+id/contact1_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
@@ -121,6 +122,7 @@
             android:textColorHint="@color/white"/>
 
         <ImageView
+            android:id="@+id/contact2_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
