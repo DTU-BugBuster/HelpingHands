@@ -1,5 +1,5 @@
 # HelpingHands
-<img src="/app/src/main/res/drawable-hdpi/hhicon.png" width="150" height="150"> 
+<img src="/app/src/main/res/drawable-xxhdpi/hhicon.png" width="150" height="150"> 
 
 Android App for helping women in danger by sending danger notifications to nominated contacts
 
