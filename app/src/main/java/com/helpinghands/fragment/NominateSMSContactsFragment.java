@@ -117,6 +117,18 @@ public class NominateSMSContactsFragment extends Fragment {
             }
         });
 
+
+        ImageView next=(ImageView)view.findViewById(R.id.nominate_sms_contacts_next);
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // TODO : validate name and phone
+                // TODO : save nominated contacts
+                homeActivity.pushFragment(new NominateMailContactsFragment());
+            }
+        });
+
         return view;
     }
 

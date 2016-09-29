@@ -1,144 +1,161 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.helpinghands.fragment.NominateMailContactsFragment">
+    android:background="@color/primary"
+    >
 
-    <!-- TODO: Update blank fragment layout -->
-    <ImageView
-        android:id="@+id/hero_image"
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:layout_gravity="left|top"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hi,"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/material_text_display2"
+            />
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/material_text_display1"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/mail_block"
+        android:layout_marginBottom="6dp"
+        android:text="Nominate Contacts to send Mail Notifs to"
+        android:textStyle="normal"
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:textSize="@dimen/material_text_subhead"
+        />
+
+
+
+    <RelativeLayout
+        android:id="@+id/mail_block"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/hh_hero"/>
-
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/black_transparent_bg"
-        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_centerInParent="true"
+        android:gravity="center"
         >
 
 
-        <TextView
-            android:id="@+id/nominate_contacts"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:padding="5dp"
-            android:text="Nominate Contacts"
-            android:layout_gravity="top|start"
-            android:typeface="monospace"
-            android:textSize="40sp"
-            android:textStyle="bold"
-            android:textColor="@color/white"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:id="@+id/contact1"
+            >
+
+
+            <EditText
+                android:id="@+id/contact3_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:hint="Name"
+                android:textSize="20sp"
+                android:textColorHint="@color/white"/>
+
+            <ImageView
+                android:id="@+id/contact3_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/phonebook"
+                />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/contact3_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@+id/contact1"
+            android:hint="Email"
+            android:textSize="20sp"
+            android:textColorHint="@color/white"
             />
 
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center">
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:id="@+id/contact2"
+            android:layout_below="@+id/contact3_phone"
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:id="@+id/contact3"
-                >
+            >
 
-
-                <EditText
-                    android:id="@+id/contact3_name"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:hint="Name"
-                    android:textSize="20sp"
-                    android:textColorHint="@color/white"/>
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:src="@drawable/phonebook"
-                    />
-
-            </LinearLayout>
 
             <EditText
-                android:id="@+id/contact3_phone"
-                android:layout_width="match_parent"
+                android:id="@+id/contact4_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:hint="Name"
+                android:textSize="20sp"
+                android:textColorHint="@color/white"/>
+
+            <ImageView
+                android:id="@+id/contact4_button"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_below="@+id/contact3"
-                android:hint="Email"
-                android:textSize="20sp"
-                android:textColorHint="@color/white"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/phonebook"
                 />
 
+        </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:id="@+id/contact4"
-                android:layout_below="@+id/contact3_phone"
-
-                >
-
-
-                <EditText
-                    android:id="@+id/contact4_name"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:hint="Name"
-                    android:textSize="20sp"
-                    android:textColorHint="@color/white"/>
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:src="@drawable/phonebook"
-                    />
-
-            </LinearLayout>
-
-            <EditText
-                android:id="@+id/contact4_phone"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/contact4"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:hint="Email"
-                android:textSize="20sp"
-                android:textColorHint="@color/white"
-                />
-
-        </RelativeLayout>
-
-
-        <ImageView
-            android:id="@+id/nominate_email_contacts_next"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/contact4_phone"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right"
-            android:padding="@dimen/activity_horizontal_margin"
-            android:layout_margin="@dimen/activity_vertical_margin"
-            android:src="@drawable/next"
-
+            android:layout_below="@+id/contact2"
+            android:layout_marginBottom="5dp"
+            android:hint="Email"
+            android:textSize="20sp"
+            android:textColorHint="@color/white"
             />
 
-    </FrameLayout>
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/nominate_mail_contacts_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:src="@drawable/next"
+
+        />
 
 </RelativeLayout>
+

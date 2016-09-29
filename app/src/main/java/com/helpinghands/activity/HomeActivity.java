@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentTransaction;
 
 import com.helpinghands.R;
 import com.helpinghands.fragment.HeroBannerFragment;
+import com.helpinghands.fragment.NominateMailContactsFragment;
 import com.helpinghands.fragment.NominateSMSContactsFragment;
 import com.helpinghands.fragment.WelcomeFragment;
 import com.helpinghands.utils.SharedPrefUtils;
@@ -15,7 +16,8 @@ import com.helpinghands.utils.SharedPrefUtils;
 public class HomeActivity extends FragmentActivity implements
         HeroBannerFragment.OnFragmentInteractionListener,
         NominateSMSContactsFragment.OnFragmentInteractionListener,
-        WelcomeFragment.OnFragmentInteractionListener{
+        WelcomeFragment.OnFragmentInteractionListener,
+        NominateMailContactsFragment.OnFragmentInteractionListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

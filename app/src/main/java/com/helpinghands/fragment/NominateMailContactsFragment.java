@@ -1,14 +1,24 @@
 package com.helpinghands.fragment;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.helpinghands.R;
+import com.helpinghands.activity.HomeActivity;
+import com.helpinghands.constants.AppConstant;
+import com.helpinghands.utils.SharedPrefUtils;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -29,6 +39,11 @@ public class NominateMailContactsFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+    private HomeActivity homeActivity;
+    private static final int RC_READ_CONTACT3=2003;
+    private static final int RC_READ_CONTACT4=2004;
+    private EditText contact3Name,contact4Name;
+    private EditText contact3Phone,contact4Phone;
 
     public NominateMailContactsFragment() {
         // Required empty public constructor
@@ -65,7 +80,96 @@ public class NominateMailContactsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_nominate_mail_contacts, container, false);
+        View view= inflater.inflate(R.layout.fragment_nominate_mail_contacts, container, false);
+
+        TextView userName=(TextView)view.findViewById(R.id.user_name);
+
+        String userFName= SharedPrefUtils.getValue(AppConstant.USER_FIRST_NAME);
+        userName.setText(userFName);
+
+
+        contact3Name=(EditText)view.findViewById(R.id.contact3_name);
+        contact3Phone=(EditText)view.findViewById(R.id.contact3_phone);
+
+        contact4Name=(EditText)view.findViewById(R.id.contact4_name);
+        contact4Phone=(EditText)view.findViewById(R.id.contact4_phone);
+
+
+        ImageView contact3Button=(ImageView)view.findViewById(R.id.contact3_button);
+        contact3Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+                intent.setType(ContactsContract.CommonDataKinds.Phone.CONTENT_ITEM_TYPE);
+                startActivityForResult(intent,RC_READ_CONTACT3);
+
+            }
+        });
+
+
+        ImageView contact4Button=(ImageView)view.findViewById(R.id.contact4_button);
+        contact4Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+                intent.setType(ContactsContract.CommonDataKinds.Phone.CONTENT_ITEM_TYPE);
+                startActivityForResult(intent,RC_READ_CONTACT4);
+
+            }
+        });
+
+
+        ImageView next=(ImageView)view.findViewById(R.id.nominate_mail_contacts_next);
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // TODO : validate name and phone
+                // TODO : save nominated contacts
+                //homeActivity.pushFragment(new NominateMailContactsFragment());
+            }
+        });
+
+
+
+
+
+        return view;
+
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        switch(requestCode){
+            case RC_READ_CONTACT3:
+                if (resultCode == Activity.RESULT_OK) {
+                    Uri contactData = data.getData();
+                    setContact(contactData,contact3Name,contact3Phone);
+                }
+                break;
+
+            case RC_READ_CONTACT4:
+                if (resultCode == Activity.RESULT_OK) {
+                    Uri contactData = data.getData();
+                    setContact(contactData,contact4Name,contact4Phone);
+                }
+                break;
+        }
+    }
+
+
+    private void setContact(Uri contactData,EditText contactName,EditText contactPhone) {
+
+        Cursor cursor = homeActivity.getContentResolver().query(contactData, null, null, null, null);
+        cursor.moveToFirst();
+
+        String name = cursor.getString(cursor.getColumnIndexOrThrow(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));
+        String email = cursor.getString(cursor.getColumnIndexOrThrow(ContactsContract.CommonDataKinds.Email.DATA1));
+
+        contactName.setText(name);
+        contactPhone.setText(email);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -78,6 +182,7 @@ public class NominateMailContactsFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+        homeActivity=(HomeActivity)context;
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
