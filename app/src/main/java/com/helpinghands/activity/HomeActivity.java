@@ -10,6 +10,8 @@ import com.helpinghands.R;
 import com.helpinghands.fragment.HeroBannerFragment;
 import com.helpinghands.fragment.NominateMailContactsFragment;
 import com.helpinghands.fragment.NominateSMSContactsFragment;
+import com.helpinghands.fragment.RegisterPinFragment;
+import com.helpinghands.fragment.SetShakeLevelFragment;
 import com.helpinghands.fragment.WelcomeFragment;
 import com.helpinghands.utils.SharedPrefUtils;
 
@@ -17,7 +19,9 @@ public class HomeActivity extends FragmentActivity implements
         HeroBannerFragment.OnFragmentInteractionListener,
         NominateSMSContactsFragment.OnFragmentInteractionListener,
         WelcomeFragment.OnFragmentInteractionListener,
-        NominateMailContactsFragment.OnFragmentInteractionListener{
+        RegisterPinFragment.OnFragmentInteractionListener,
+        NominateMailContactsFragment.OnFragmentInteractionListener,
+        SetShakeLevelFragment.OnFragmentInteractionListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

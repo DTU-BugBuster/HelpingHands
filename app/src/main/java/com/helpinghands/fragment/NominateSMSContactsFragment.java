@@ -137,21 +137,20 @@ public class NominateSMSContactsFragment extends Fragment {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        switch(requestCode){
-            case RC_READ_CONTACT1:
-                if (resultCode == Activity.RESULT_OK) {
-                    Uri contactData = data.getData();
-                    setContact(contactData,contact1Name,contact1Phone);
-                }
-                break;
+        if (resultCode == Activity.RESULT_OK){
+            Uri contactData = data.getData();
 
-            case RC_READ_CONTACT2:
-                if (resultCode == Activity.RESULT_OK) {
-                    Uri contactData = data.getData();
+            switch(requestCode){
+                case RC_READ_CONTACT1:
+                    setContact(contactData,contact1Name,contact1Phone);
+                    break;
+
+                case RC_READ_CONTACT2:
                     setContact(contactData,contact2Name,contact2Phone);
-                }
-                break;
+                    break;
+            }
         }
+
     }
 
     private void setContact(Uri contactData,EditText contactName,EditText contactPhone) {

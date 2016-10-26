@@ -1,4 +1,4 @@
-package layout;
+package com.helpinghands.fragment;
 
 import android.content.Context;
 import android.net.Uri;

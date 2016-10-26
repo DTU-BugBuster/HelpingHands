@@ -8,7 +8,6 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.helpinghands.R;
-import com.helpinghands.control.AccelerometerManager;
 import com.helpinghands.control.MyService;
 import com.helpinghands.control.UserInfoManager;
 

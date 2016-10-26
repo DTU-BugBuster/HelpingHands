@@ -7,8 +7,14 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.helpinghands.R;
+import com.helpinghands.activity.HomeActivity;
+import com.helpinghands.constants.AppConstant;
+import com.helpinghands.utils.SharedPrefUtils;
+import com.sun.mail.imap.Utility;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -27,6 +33,8 @@ public class RegisterPinFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private HomeActivity homeActivity;
 
     private OnFragmentInteractionListener mListener;
 
@@ -65,7 +73,30 @@ public class RegisterPinFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_register_pin, container, false);
+        View view= inflater.inflate(R.layout.fragment_register_pin, container, false);
+
+        final EditText pin=(EditText)view.findViewById(R.id.pin);
+
+
+        ImageView btnRegisterPIN=(ImageView)view.findViewById(R.id.btn_register_pin);
+
+        btnRegisterPIN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO: validate register PIN
+
+                String PIN=pin.getText().toString();
+                SharedPrefUtils.saveValue(AppConstant.USER_PIN,PIN);
+
+                homeActivity.pushFragment(new SetShakeLevelFragment());
+
+            }
+        });
+
+
+
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -78,6 +109,7 @@ public class RegisterPinFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+        homeActivity=(HomeActivity)context;
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {

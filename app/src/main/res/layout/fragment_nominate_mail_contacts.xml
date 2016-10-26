@@ -77,14 +77,7 @@
                 android:textSize="20sp"
                 android:textColorHint="@color/white"/>
 
-            <ImageView
-                android:id="@+id/contact3_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginBottom="5dp"
-                android:src="@drawable/phonebook"
-                />
+
 
         </LinearLayout>
 
@@ -121,14 +114,7 @@
                 android:textSize="20sp"
                 android:textColorHint="@color/white"/>
 
-            <ImageView
-                android:id="@+id/contact4_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginBottom="5dp"
-                android:src="@drawable/phonebook"
-                />
+
 
         </LinearLayout>
 

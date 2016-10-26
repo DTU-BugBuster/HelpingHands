@@ -1,5 +1,6 @@
 package com.helpinghands.utils;
 
+import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 
@@ -17,7 +18,7 @@ public class SharedPrefUtils {
 
         if(sharedPreferences==null && context!=null){
             Logger.i(TAG," SP Initialized");
-            sharedPreferences=context.getSharedPreferences(AppConstant.SHARED_PREF_FILE, Context.MODE_PRIVATE);
+            sharedPreferences=context.getApplicationContext().getSharedPreferences(AppConstant.SHARED_PREF_FILE, Context.MODE_PRIVATE);
         }
     }
 
