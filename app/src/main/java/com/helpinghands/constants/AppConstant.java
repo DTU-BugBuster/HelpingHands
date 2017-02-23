@@ -15,4 +15,8 @@ public class AppConstant {
     public static final String USER_EMAIL="USER_EMAIL";
 
     public static final String USER_PIN="USER_PIN";
+
+    public static final String USER_SHAKE_THRESHOLD="USER_SHAKE_THRESHOLD";
+
+    public static final String RECREATE_SHAKE_SERVICE_INTENT = "io.github.aloygupta.helpinghands.recreateshake";
 }

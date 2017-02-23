@@ -11,10 +11,10 @@ import com.helpinghands.constants.AppConstant;
  */
 public class SharedPrefUtils {
 
-    private static SharedPreferences sharedPreferences;
+    private SharedPreferences sharedPreferences;
     private static final String TAG=SharedPrefUtils.class.getSimpleName();
 
-    public static void initSharedPref(Context context){
+    public void initSharedPref(Context context){
 
         if(sharedPreferences==null && context!=null){
             Logger.i(TAG," SP Initialized");
@@ -22,32 +22,30 @@ public class SharedPrefUtils {
         }
     }
 
-    private static SharedPreferences getSharedPref(){
-
-        return sharedPreferences;
-    }
 
 
-    public static void saveValue(String key,String value){
+    public void saveValue(Context context,String key,String value){
 
-        if(sharedPreferences!=null){
-            SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putString(key,value);
-            editor.commit();
-
-            Logger.i(TAG,"saved value "+key+" -> "+value);
+        if(sharedPreferences==null){
+            initSharedPref(context);
         }
 
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(key,value);
+        editor.commit();
+        Logger.i(TAG,"saved value "+key+" -> "+value);
+
+
     }
 
-    public static String getValue(String key){
+    public String getValue(Context context,String key){
 
         String value=null;
-        if(sharedPreferences!=null){
-             value=sharedPreferences.getString(key,null);
-
+        if(sharedPreferences==null){
+            initSharedPref(context);
         }
 
+        value=sharedPreferences.getString(key,null);
         Logger.i(TAG,"retrieved value "+key+" -> "+value);
 
         return value;

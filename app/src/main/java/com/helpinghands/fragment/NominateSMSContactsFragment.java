@@ -83,7 +83,7 @@ public class NominateSMSContactsFragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_nominate_sms_contacts, container, false);
         TextView userName=(TextView)view.findViewById(R.id.user_name);
 
-        String userFName= SharedPrefUtils.getValue(AppConstant.USER_FIRST_NAME);
+        String userFName= new SharedPrefUtils().getValue(homeActivity,AppConstant.USER_FIRST_NAME);
         userName.setText(userFName);
 
 

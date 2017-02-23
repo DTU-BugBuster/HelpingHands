@@ -28,8 +28,6 @@ public class HomeActivity extends FragmentActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        SharedPrefUtils.initSharedPref(this);
-
         HeroBannerFragment heroBannerFragment=new HeroBannerFragment();
         pushFragment(heroBannerFragment);
     }

@@ -86,7 +86,7 @@ public class RegisterPinFragment extends Fragment {
                 // TODO: validate register PIN
 
                 String PIN=pin.getText().toString();
-                SharedPrefUtils.saveValue(AppConstant.USER_PIN,PIN);
+                new SharedPrefUtils().saveValue(homeActivity,AppConstant.USER_PIN,PIN);
 
                 homeActivity.pushFragment(new SetShakeLevelFragment());
 

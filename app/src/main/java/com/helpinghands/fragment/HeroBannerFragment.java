@@ -71,6 +71,13 @@ public class HeroBannerFragment extends Fragment implements GoogleApiClient.OnCo
     }
 
     @Override
+    public void onStart() {
+        super.onStart();
+        if (mGoogleApiClient != null)
+            mGoogleApiClient.connect();
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
@@ -158,10 +165,10 @@ public class HeroBannerFragment extends Fragment implements GoogleApiClient.OnCo
                 );
 
 
-                SharedPrefUtils.saveValue(AppConstant.USER_FIRST_NAME,fname);
-                SharedPrefUtils.saveValue(AppConstant.USER_LAST_NAME,lname);
-                SharedPrefUtils.saveValue(AppConstant.USER_FULL_NAME,fullName);
-                SharedPrefUtils.saveValue(AppConstant.USER_EMAIL,email);
+                new SharedPrefUtils().saveValue(homeActivity,AppConstant.USER_FIRST_NAME,fname);
+                new SharedPrefUtils().saveValue(homeActivity,AppConstant.USER_LAST_NAME,lname);
+                new SharedPrefUtils().saveValue(homeActivity,AppConstant.USER_FULL_NAME,fullName);
+                new SharedPrefUtils().saveValue(homeActivity,AppConstant.USER_EMAIL,email);
 
 
                 Toast.makeText(homeActivity,acct.getEmail(),Toast.LENGTH_SHORT).show();
@@ -201,6 +208,26 @@ public class HeroBannerFragment extends Fragment implements GoogleApiClient.OnCo
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void onStop() {
+        if (mGoogleApiClient != null && mGoogleApiClient.isConnected()) {
+            mGoogleApiClient.disconnect();
+        }
+
+        super.onStop();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+
+        if(mGoogleApiClient!=null){
+            mGoogleApiClient.stopAutoManage(getActivity());
+            mGoogleApiClient.disconnect();
+        }
+
     }
 
     @Override

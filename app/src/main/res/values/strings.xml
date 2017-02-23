@@ -33,9 +33,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
-
-
-
     <string name="welcome_msg0">Shake the device when in danger.</string>
 
     <string name="welcome_msg1">We will send SMS and emails to your trusted contacts.</string>
@@ -43,5 +40,16 @@
     <string name="welcome_msg2">Including your current location.</string>
 
     <string name="welcome_msg3">It\'s that simple ♡</string>
+
+    <string name="str_start_recording">Start Recording</string>
+
+    <string name="str_retry">Retry</string>
+
+    <string name="str_done_screen1">Done. You can close the app!</string>
+    <string name="str_done_screen2">1. Shake device above threshold value\nOR\n2. Press Alert button manually!</string>
+    <string name="str_done_screen3">Stay safe :)</string>
+
+    <string name="str_recreate_service_intent">io.github.aloygupta.helpinghands.recreateshake</string>
+
 
 </resources>

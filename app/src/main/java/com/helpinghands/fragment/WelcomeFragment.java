@@ -73,7 +73,7 @@ public class WelcomeFragment extends Fragment {
 
         TextView userName=(TextView)view.findViewById(R.id.user_name);
 
-        String userFName=SharedPrefUtils.getValue(AppConstant.USER_FIRST_NAME);
+        String userFName=new SharedPrefUtils().getValue(getContext(),AppConstant.USER_FIRST_NAME);
         userName.setText(userFName);
 
 
